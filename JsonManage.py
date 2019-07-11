@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 import functools
-from VersionsСhange import versions
+from VersionChange import versions
 
 def add(way, element):
 
@@ -11,6 +11,25 @@ def add(way, element):
     way.append(element)
 
     return way
+
+def create_dir(way, node, element):
+
+    data = node
+    try:
+        for i in range(len(way)):
+            node = node[way[i]]
+    except KeyError:
+        fol = finder(way[:i], data)
+
+    dir_ = fol
+
+    for j in range(len(way[i:])-1):
+        fol[way[i:][j]] = {}
+        fol = fol[way[i:][j]]
+
+    fol[way[-1]] = element
+
+    return way[:i], dir_
 
 def move(way, data, updates):
 
@@ -71,15 +90,15 @@ def setup(file):
 
                     if key == 'Add':
 
+                        node = data['settings']
+                        inf = updates['Data']
+
                         try:
-                            fol = finder(way, data['settings'])
-                            new_data = add(fol, updates['Data'])
+                            fol = finder(way, node)
+                            new_data = add(fol, inf)
                         except KeyError:
-                            fol = finder(way[:-1], data['settings'])
-                            fol.update({way[-1]: updates['Data']})
-                            new_data = fol
-                            way = way[:-1]
-                            
+                            way, new_data = create_dir(way, node, inf)
+
                         update(data, new_data, way)
 
                     if key == 'Delete':
@@ -115,4 +134,4 @@ def delete(data, w):
     fol, key = reduce(w, data['settings'])
     del fol[key]
 
-setup('Files/config.json')
+setup('Test/basic.json')

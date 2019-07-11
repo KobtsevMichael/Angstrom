@@ -1,80 +1,58 @@
 {
-    "settings_version": "0.7.2",
-    "settings": {
-        "serial_number": 9000,
-        "name_device": "WS-8",
-        "precision": 8,
-        "gui": {
-            "sensors": [
-                {
-                    "sensor_id": 1,
-                    "range_axis_y": {
-                        "max": 33000,
-                        "min": 0
-                    },
-                    "range_axis_x": {
-                        "max": 2048,
-                        "min": 1
-                    }
+  "settings_version": "0.4.1",
+  "settings":  {
+     "serial_number": 9000,
+     "name_device": "WS-8",
+     "precision": 8,
+     "gui": {
+       "sensors": [
+         {
+           "sensor_id": 1,
+           "range_axis_y": 33000,
+           "range_axis_x": 2048
+         },
+         {
+           "sensor_id": 2,
+           "range_axis_y": 33000,
+           "range_axis_x": 2048
+         }
+       ]
+     },
+     "hwsc":{
+        "src":"./hwsc-zynq.dll",
+        "hwsc_presets":{
+          "broadcast_port": 2783,
+           "sensors":[
+              {
+                "sensor_id": 1,
+                "base_parameters": {
+                  "PARAMETER_INTEGRATION_TIME_MAX": 1000,
+                  "PARAMETER_INTEGRATION_TIME_MIN": 0
                 },
-                {
-                    "sensor_id": 2,
-                    "range_axis_y": {
-                        "max": 33000,
-                        "min": 0
-                    },
-                    "range_axis_x": {
-                        "max": 2048,
-                        "min": 1
-                    }
+                "board_parametrs": {
+                   "PARAMETER_GAIN": 40,
+                   "PARAMETER_INTEGRATION_TIME": 0,
+                   "PARAMETER_ISHIFT": 0,
+                   "PARAMETER_SHIFT_EXT": 495,
+                   "PARAMETER_SHIFT_INT": 0
                 }
-            ],
-            "snapshot_maker": [
-                0,
-                0
-            ],
-            "wlm_data_export": [
-                0,
-                0
-            ],
-            "helecopter": "./hwsc-zynq.dll"
-        },
-        "hwsc": {
-            "src": "./hwsc-zynq.dll",
-            "hwsc_presets": {
-                "sensors": [
-                    {
-                        "sensor_id": 1,
-                        "base_parameters": {
-                            "PARAMETER_INTEGRATION_TIME_MAX": 1000,
-                            "PARAMETER_INTEGRATION_TIME_MIN": 0
-                        },
-                        "board_parametrs": {
-                            "PARAMETER_GAIN": 40,
-                            "PARAMETER_INTEGRATION_TIME": 0,
-                            "PARAMETER_ISHIFT": 0,
-                            "PARAMETER_SHIFT_EXT": 495,
-                            "PARAMETER_SHIFT_INT": 0
-                        }
-                    },
-                    {
-                        "sensor_id": 2,
-                        "base_parameters": {
-                            "PARAMETER_INTEGRATION_TIME_MAX": 1000,
-                            "PARAMETER_INTEGRATION_TIME_MIN": 0
-                        },
-                        "board_parametrs": {
-                            "PARAMETER_GAIN": 40,
-                            "PARAMETER_INTEGRATION_TIME": 0,
-                            "PARAMETER_ISHIFT": 0,
-                            "PARAMETER_SHIFT_EXT": 495,
-                            "PARAMETER_SHIFT_INT": 0
-                        }
-                    }
-                ],
-                "jesus_crazy": 2783
+              },
+              {
+                "sensor_id": 2,
+                "base_parameters": {
+                  "PARAMETER_INTEGRATION_TIME_MAX": 1000,
+                  "PARAMETER_INTEGRATION_TIME_MIN": 0
+                },
+                "board_parametrs": {
+                   "PARAMETER_GAIN": 40,
+                   "PARAMETER_INTEGRATION_TIME": 0,
+                   "PARAMETER_ISHIFT": 0,
+                   "PARAMETER_SHIFT_EXT": 495,
+                   "PARAMETER_SHIFT_INT": 0
+                }
             }
-        },
-        "logo": ""
-    }
+           ]
+        }
+     }
+  }
 }
