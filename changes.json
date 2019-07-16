@@ -1,3 +1,145 @@
 {
-  "0.4.1": "first"
+  "main": {
+    "0.6.1": [
+      {
+        "add": "modules/snapshort_maker",
+        "data": "2.4.4"
+      },
+      {
+        "add": "modules/wlm_data_export",
+        "data": "1.3.0"
+      }
+    ],
+    "0.7.2": [
+      {
+        "add": "modules/images_import",
+        "data": "1.5.0"
+      }
+    ]
+  },
+  "gui": {
+    "1.3.0": [
+      {
+        "move": "sensors/0/range_axis_y",
+        "to": "sensors/0/range_axis_y/max"
+      },
+      {
+        "move": "sensors/1/range_axis_y",
+        "to": "sensors/1/range_axis_y/max"
+      },
+      {
+        "move": "sensors/0/range_axis_x",
+        "to": "sensors/0/range_axis_x/max"
+      },
+      {
+        "move": "sensors/1/range_axis_x",
+        "to": "sensors/1/range_axis_x/max"
+      },
+      {
+        "add": "sensors/0/range_axis_y/min",
+        "data": 0
+      },
+      {
+        "add": "sensors/0/range_axis_x/min",
+        "data": 1
+      },
+      {
+        "add": "sensors/1/range_axis_y/min",
+        "data": 0
+      },
+      {
+        "add": "sensors/1/range_axis_x/min",
+        "data": 1
+      }
+    ]
+  },
+  "snapshort_maker": {
+    "2.4.4": [
+      {
+        "add": "images_composition",
+        "data": 1
+      },
+      {
+        "add": "images_composition/1",
+        "data": 2
+      }
+    ]
+  },
+  "wlm_data_export": {
+    "1.3.0": [
+      {
+        "add": "sensors",
+        "data": 1
+      },
+      {
+        "add": "sensors/1",
+        "data": 2
+      }
+    ]
+  },
+  "happy": {},
+  "images_import": {
+    "1.5.0": [
+      {
+        "add": "sensors",
+        "data": 1.1
+      },
+      {
+        "move": "sensors/description/gain_power",
+        "to": "sensors/description/GAIN"
+      },
+      {
+        "add": "sensors/description/TIME_EXIT",
+        "data": 345
+      },
+      {
+        "add": "sensors/description/TIME_INPUT",
+        "data": 23
+      }
+    ],
+    "1.7": [
+      {
+        "move": "sensors/description",
+        "to": "sensors/settings"
+      },
+      {
+        "add": "sensors/description",
+        "data": []
+      },
+      {
+        "add": "sensors/description/0",
+        "data": {}
+      },
+      {
+        "add": "sensors/description/0/name",
+        "data": "Rocket"
+      },
+      {
+        "add": "sensors/description/0/image",
+        "data": "rocket.png"
+      },
+      {
+        "add": "sensors/description/1",
+        "data": {}
+      }
+    ],
+    "1.8.1": [
+      {
+        "add": "sensors/description/1/name",
+        "data": "Satelitte"
+      },
+      {
+        "add": "sensors/description/1/image",
+        "data": "satelitte_3.png"
+      },
+      {
+        "delete": "sensors/settings/TIME_EXIT",
+        "value": 345
+      },
+      {
+        "move": "sensors/settings/TIME_INPUT",
+        "to": "sensors/settings/TIME"
+      }
+    ]
+  }
 }

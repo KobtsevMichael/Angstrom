@@ -1,0 +1,107 @@
+{
+  "settings_version": "0.7.2",
+  "serial_number": 9000,
+  "name_device": "WS-8",
+  "precision": 8,
+  "modules": {
+    "gui": {
+      "settings_version": "1.3.0",
+      "sensors": [
+        {
+          "sensor_id": 1,
+          "range_axis_y": {
+            "max": 33000,
+            "min": 0
+          },
+          "range_axis_x": {
+            "max": 2048,
+            "min": 1
+          }
+        },
+        {
+          "sensor_id": 2,
+          "range_axis_y": {
+            "max": 33000,
+            "min": 0
+          },
+          "range_axis_x": {
+            "max": 2048,
+            "min": 1
+          }
+        }
+      ]
+    },
+    "snapshort_maker": {
+      "settings_version": "2.4.4",
+      "images_composition": [
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    "wlm_data_export": {
+      "settings_version": "1.3.0",
+      "sensors": [
+        1,
+        2
+      ]
+    },
+    "hwsc": {
+      "settings_version": "1.56.21",
+      "src": "./hwsc-zynq.dll",
+      "hwsc_presets": {
+        "broadcast_port": 2783,
+        "sensors": [
+          {
+            "sensor_id": 1,
+            "base_parameters": {
+              "PARAMETER_INTEGRATION_TIME_MAX": 1000,
+              "PARAMETER_INTEGRATION_TIME_MIN": 0
+            },
+            "board_parametrs": {
+              "PARAMETER_GAIN": 40,
+              "PARAMETER_INTEGRATION_TIME": 0,
+              "PARAMETER_ISHIFT": 0,
+              "PARAMETER_SHIFT_EXT": 495,
+              "PARAMETER_SHIFT_INT": 0
+            }
+          },
+          {
+            "sensor_id": 2,
+            "base_parameters": {
+              "PARAMETER_INTEGRATION_TIME_MAX": 1000,
+              "PARAMETER_INTEGRATION_TIME_MIN": 0
+            },
+            "board_parametrs": {
+              "PARAMETER_GAIN": 40,
+              "PARAMETER_INTEGRATION_TIME": 0,
+              "PARAMETER_ISHIFT": 0,
+              "PARAMETER_SHIFT_EXT": 495,
+              "PARAMETER_SHIFT_INT": 0
+            }
+          }
+        ]
+      }
+    },
+    "images_import": {
+      "settings_version": "1.8.1",
+      "sensors": {
+        "settings": {
+          "GAIN": 1.1,
+          "TIME": 23
+        },
+        "description": [
+          {
+            "name": "Rocket",
+            "image": "rocket.png"
+          },
+          {
+            "name": "Satelitte",
+            "image": "satelitte_3.png"
+          }
+        ]
+      }
+    }
+  }
+}
