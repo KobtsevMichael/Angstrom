@@ -2,7 +2,6 @@ from tkinter import *
 from tkinter import ttk
 from tkinter.font import Font
 from PIL import ImageTk, Image
-# from threading import Thread
 
 import json
 import json_update
@@ -226,7 +225,6 @@ class Window(object):
         else:
             inf = data["modules"][self.module]
 
-        self.create_code_scrolls()
         self.code.destroy()
 
         self.show_code(json.dumps(inf, indent=2, ensure_ascii=False).strip())
